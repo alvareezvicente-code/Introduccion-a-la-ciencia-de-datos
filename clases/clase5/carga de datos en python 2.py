@@ -7,12 +7,10 @@ BASE_DIR = Path.cwd()
 
 # 2. Construir la ruta relativa de forma segura utilizando el operador /
 # Estructura esperada: tu_proyecto/data/raw/datos.csv
-archivo = "cantidad_de_residuos_en_la_estacion_de_transferencia_2023.csv"
+archivo = r"C:\Users\Santi\Documents\GitHub\personal-mio\SCRIPT\estacion-de-transferencia-de-residuos-solidos-urbanos.htm"
 ruta_csv = BASE_DIR / "clases" / "clase4" / archivo
 
-ruta_csv = BASE_DIR / "clases" / "clase4" / "cantidad_de_residuos_en_la_estacion_de_transferencia_2023.csv"
-
-# 3. Verificar que el archivo realmente existe antes de cargarlo
+ruta_csv = BASE_DIR / "clases" / "clase4" / archivo
 if not ruta_csv.exists():
     raise FileNotFoundError(f"No se encontró el archivo en: {ruta_csv}")
 
@@ -47,3 +45,4 @@ df.duplicated().sum() # Cantidad de filas exactamente iguales
 ## 5.5. Primeras filas
 print("\nPrimeras 5 filas:")
 print(df.head())
+# %%
